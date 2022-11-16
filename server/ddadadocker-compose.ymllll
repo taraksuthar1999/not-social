@@ -1,0 +1,21 @@
+# version: "3.8"
+# services:
+#   mongodb-server:
+#     image: mongo:5.0
+#     environment:
+#       MONGO_INITDB_ROOT_USERNAME: root
+#       MONGO_INITDB_ROOT_PASSWORD: root
+#     ports:
+#       - 27017:27017
+#     volumes:
+#       - ./mongo-volume/auth/data/db
+#   auth:
+#     build: .
+#     env_file:
+#       - .env
+#     environment:
+#       - MONGODB_CONNSTRING=mongodb://root:root@mogodb-server
+#     ports:
+#       - "8080:3009"
+
+

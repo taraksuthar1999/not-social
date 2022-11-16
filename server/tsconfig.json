@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs", // Specifies the module code generation method. Node uses commonjs.
+    "esModuleInterop": true, // specifies the output language level
+    "target": "es6", 
+    "moduleResolution": "node", // this helps the compiler figure out what an import refers to. The value node mimics the Node module resolution mechanism.
+    "sourceMap": true,
+    "outDir": "dist" ,//This is the location to output .js files after transpilation. In this tutorial you will save it as dist, 
+    "rootDir": "src", 
+    "resolveJsonModule": true 
+  },
+  "lib": ["es2015"]
+}
