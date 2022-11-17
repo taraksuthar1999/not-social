@@ -12,3 +12,7 @@ after_success:
   - docker build -t tarak99/multi-client ./client
   - docker build -t tarak99/multi-nginx ./nginx
   - docker build -t tarak99/multi-server ./server
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push tarak99/multi-client
+  - docker push tarak99/multi-nginx
+  - docker push tarak99/multi-server

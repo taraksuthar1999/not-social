@@ -11,6 +11,8 @@ import { useMediaQuery } from "@mui/material";
 import NavbarButtons from "./NavbarButtons";
 import NavbarProfile from "./NavbarProfile";
 import SideBar from "./SideBar";
+import Link from '@mui/joy/Link';
+import { Link as RouterLink, useNavigate } from 'react-router-dom'
 import logo from "../images/NOT SOCIAL.png"
 
 
@@ -43,7 +45,9 @@ export default function Navbar(){
             <MenuIcon />
           </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1,marginTop:'10px' }}>
-              <img src={logo} className="logo"/>
+              <Link component={RouterLink}  to={'/'}  underline="none">
+                <img src={logo} className="logo"/>
+              </Link>
             </Typography>
            {min600&&(token?<NavbarProfile/>:<NavbarButtons/>)  }
           </Toolbar>

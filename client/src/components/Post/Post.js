@@ -108,7 +108,7 @@ export default function Post({data}) {
             </IconButton>
           )}
           <IconButton aria-label="comment">
-            <ChatBubbleOutlineIcon sx={{color:'black'}} fontSize="small" /><Typography color='text.primary' sx={{fontSize:"0.5em"}}>{comments}</Typography>
+            <Link  underline="none" onClick={()=>read()}><ChatBubbleOutlineIcon sx={{color:'black'}} fontSize="small" /><Typography color='text.primary' sx={{fontSize:"0.5em"}}>{comments}</Typography></Link>
           </IconButton>
           <IconButton>
             <Typography sx={{fontSize:"0.5em"}}>{dateFormatter.format(Date.parse(data.createdAt))}</Typography>
