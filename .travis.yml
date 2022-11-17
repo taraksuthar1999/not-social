@@ -16,3 +16,15 @@ after_success:
   - docker push tarak99/multi-client
   - docker push tarak99/multi-nginx
   - docker push tarak99/multi-server
+
+deploy:
+  provider: elasticbeanstalk
+  region: ap-northeast-1
+  app: not-social
+  env: Notsocial-env
+  bucket_name: elasticbeanstalk-ap-northeast-1-145189346570
+  bucket_path: docker-notsocial
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY

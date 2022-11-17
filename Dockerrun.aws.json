@@ -1,0 +1,37 @@
+{
+    "AWSEBDockerrunVersion":2,
+    "containerDefinitions":[
+        {
+            "name":"client",
+            "image":"tarak99/multi-client",
+            "hostname":"client",
+            "essential":false,
+            "links":["server"]
+        },
+        {
+            "name":"server",
+            "image":"tarak99/multi-server",
+            "hostname":"api",
+            "essential":true,
+            "portMappings":[
+                {
+                    "hostPort":3009,
+                    "containerPort":3009
+                }
+            ]
+        },
+        {
+            "name":"nginx",
+            "image":"tarak99/multi-nginx",
+            "hostname":"nginx",
+            "essential":true,
+            "portMappings":[
+                {
+                    "hostPort":80,
+                    "containerPort":80
+                }
+            ],
+            "links":["client","server"]
+        }
+    ]
+}

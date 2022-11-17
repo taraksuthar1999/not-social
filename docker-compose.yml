@@ -37,7 +37,7 @@ services:
       - PORT=3009
       - SECRET=secret
       - DB=userData
-      - MONGO_URL=mongodb://root:root@mongodb-server:27017/
+      - MONGO_URL=mongodb+srv://root:root@cluster0.oz4c0kw.mongodb.net/?retryWrites=true&w=majority
   client:
     build:
       dockerfile: Dockerfile.dev
