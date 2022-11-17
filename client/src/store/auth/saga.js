@@ -27,7 +27,6 @@ function* register({ payload }) {
       return await axios
         .post(`${process.env.REACT_APP_BASE_URL}/auth/register`, {userName,email,password})
         .then((res) => {
-          console.log(res);
           return res;
         });
     });
