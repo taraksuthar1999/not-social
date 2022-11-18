@@ -107,8 +107,8 @@ export default function Post({data}) {
               <ThumbUpOffAltIcon sx={{color:'black'}} fontSize="small" /><Typography color='text.primary' sx={{fontSize:"0.5em"}}>{likes}</Typography>
             </IconButton>
           )}
-          <IconButton aria-label="comment">
-            <Link  underline="none" onClick={()=>read()}><ChatBubbleOutlineIcon sx={{color:'black'}} fontSize="small" /><Typography color='text.primary' sx={{fontSize:"0.5em"}}>{comments}</Typography></Link>
+          <IconButton onClick={()=>read()} aria-label="comment">
+            <ChatBubbleOutlineIcon sx={{color:'black'}} fontSize="small" /><Typography color='text.primary' sx={{fontSize:"0.5em"}}>{comments}</Typography>
           </IconButton>
           <IconButton>
             <Typography sx={{fontSize:"0.5em"}}>{dateFormatter.format(Date.parse(data.createdAt))}</Typography>
