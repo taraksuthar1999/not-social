@@ -1,7 +1,8 @@
 FROM node:latest as builder
 USER node
 WORKDIR '/app'
-COPY --chown=node:node ./package.json ./
+COPY ./package.json ./
 RUN npm install
-COPY --chown=node:node ./ ./
+COPY ./ ./
+RUN chmod 777 /app/node_modules
 RUN npm run build
