@@ -17,13 +17,13 @@ services:
       - api
       - client
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./nginx
     ports:
       - '3050:80'
   api:
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./server
     volumes:
       - /app/node_modules
@@ -40,7 +40,7 @@ services:
       - MONGO_URL=mongodb+srv://root:root@cluster0.oz4c0kw.mongodb.net/?retryWrites=true&w=majority
   client:
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./client   
     volumes:
       - /app/node_modules
