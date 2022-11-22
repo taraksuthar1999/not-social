@@ -50,9 +50,13 @@ class Comment extends Common_1.Common {
                                 }],
                             as: "user"
                         }
+                    },
+                    {
+                        $sort: {
+                            createdAt: -1
+                        }
                     }
                 ]).toArray();
-                // .find({parentId:this.parentId}).toArray()
             }
             catch (error) {
                 throw new Error();
