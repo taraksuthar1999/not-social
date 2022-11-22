@@ -23,7 +23,7 @@ import LoadingModal from "../../utils/LoadingModal";
 const validationSchema = Yup.object({
   message: Yup.string()
     .required("Message is required")
-    .min(5, "Too short")
+    .min(3, "Too short")
     .label("message"),
 });
 
@@ -36,42 +36,15 @@ const dateFormatter = new Intl.DateTimeFormat(undefined,{
 
 function ViewPost(props){
     const {like,unlike,fetchLike,fetchComment,listenForLike,isLiked,listenForComment} = React.useContext(SocketContext);
-    const [commentCount,setCommentCount] = useState(false)
-    const {openLogin} = React.useContext(ModalContext)
+    const {openLogin} = React.useContext(ModalContext)  
     const {id} = useParams()
     const user = useSelector(state=>state.auth.user) ?? null
     const [likes,setLikes] = useState(0)
     const [liked,setLiked] = useState(false)
-    const [comments,setComments] = useState(0)
-  
-  
-    const initialState = {
-        message: "",
-    };
-    const [initFormData,setInitFormData] = useState(initialState);
 
     useEffect(()=>{
-        fetchComment(id,(count)=>{
-            setComments(count)
-        })
         props.getPost({id})
-    },[comments])
-    
-    const onSubmit = async (formData) => {
-        props.commentAdd({message:formData.message,parentId:props.post._id,callback:()=>setCommentCount(prev=>!prev)})
-    };
-    
-    const formik = useFormik({
-        initialValues: initFormData,
-        validationSchema: validationSchema,
-        enableReinitialize: true,
-        onSubmit: (values,{resetForm}) =>{           
-            onSubmit(values)
-            resetForm(initialState)
-        } 
-    });
-    const { handleChange, handleSubmit, values, errors, touched, handleBlur } =
-    formik;
+    },[])
     
     const likeHandler = async(callback)=>{
         callback(id,user?._id,(state)=>{
@@ -82,9 +55,6 @@ function ViewPost(props){
     useEffect(()=>{
         listenForLike(id,(count)=>{
             setLikes(count)
-         })
-         listenForComment(id,count=>{
-            setComments(count)
          })
         if(user) isLiked(id,user._id,(state)=>{
             setLiked(state) 
@@ -98,8 +68,7 @@ function ViewPost(props){
         })
       },[liked])
 
-    return props.loading?<LoadingModal/>:<Grid container>
-                <Grid item md={8}>
+    return props.loading?<LoadingModal/>:
                         <Box sx={{maxWidth:'sm',margin:'25px auto',border:"1px solid rgba(0, 0, 0, 0.12)"}}>
                             <Card sx={{ boxShadow:0,borderRadius:0,padding:'15px'}}>
                                 <Box mb={3}>
@@ -137,36 +106,6 @@ function ViewPost(props){
                                 </Box>
                             </Card>
                         </Box>
-                        <Box sx={{ maxWidth:'sm',margin:'25px auto',border:"1px solid rgba(0, 0, 0, 0.12)",padding:"15px"}}>
-                            <FormikProvider value={formik}>
-                                <Form onSubmit={handleSubmit}>
-                                    <Box display={"flex"}>
-                                    <TextField fullWidth 
-                                        name="message"
-                                        placeholder="Comment"
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                        value={values.message}
-                                        error={errors.message && touched.message}
-                                        helperText={errors.message && touched.message ? errors.email : null}
-                                    />
-                                    {user?<Button type="submit">Post</Button>:<Button onClick={()=>openLogin()}>Post</Button>}
-                                    </Box>
-                                </Form>
-                            </FormikProvider>
-                        </Box>
-                        <Box sx={{ maxWidth:'sm',margin:'25px auto',border:"1px solid rgba(0, 0, 0, 0.12)"}}>
-                            <Box sx={{padding:"15px",fontSize:"0.5em"}}>
-                                <Typography>{comments} Comments</Typography>
-                            </Box>
-                            <Divider/>
-                            <Box>
-                                <CommentList comments={props.post?.comments}/>
-                            </Box>
-                        </Box>
-                </Grid>
-            </Grid>
-           
 }
 
 const commentAdd = actions.commentAdd

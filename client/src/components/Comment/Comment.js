@@ -33,6 +33,7 @@ export default function Comment({data}){
         listenForLike(data._id,(count)=>{
             setLikes(count)
          })
+         
         if(user) isLiked(data._id,user._id,(state)=>{
             setLiked(state) 
         })

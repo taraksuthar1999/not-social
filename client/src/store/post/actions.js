@@ -31,20 +31,19 @@ const postReducer = createSlice({
         state.post = payload
     },
     commentAdd:(state,{payload})=>{
-        state.loading = true
+        state.loading = false
         state.data = payload
     },
     commentAddSuccess:(state,{})=>{
         state.loading = false
     },
     getCommentsByParentId:(state,{payload})=>{
-      state.loading = true
+      state.loading = false
       state.data = payload
     },
     getCommentsByParentIdSuccess:(state,{payload})=>{
-      console.log(payload)
-        // state.loading = false
-        // state.comments = payload
+        state.loading = false
+        state.comments = payload
     }
   },
 });

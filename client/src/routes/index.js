@@ -6,6 +6,7 @@ import ViewPost from "../components/Post/ViewPost";
 import { SocketProvider } from "../contexts/context";
 import Loading from "../utils/Loading";
 import LoadingModal from "../utils/LoadingModal";
+import ViewPostCard from "../components/Post/ViewPostCard";
 
 function Routing(){
   return(
@@ -14,7 +15,7 @@ function Routing(){
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
-              <Route path="/post/:id" element={<ViewPost/>} />
+              <Route path="/post/:id" element={<ViewPostCard/>} />
               <Route path="/loading" element={<LoadingModal/>} />
             </Route>
           </Routes>
