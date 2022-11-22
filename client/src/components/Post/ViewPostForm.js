@@ -18,7 +18,7 @@ import { useState } from "react";
 const validationSchema = Yup.object({
     message: Yup.string()
       .required("Message is required")
-      .min(5, "Too short")
+      .min(3, "Too short")
       .label("message"),
   });
   
