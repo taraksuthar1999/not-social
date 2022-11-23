@@ -21,7 +21,7 @@ const dateFormatter = new Intl.DateTimeFormat(undefined,{
 })
 
 export default function Post({data}) {
-  const {like,view,unlike,fetchLike,listenForLike,listenForView,fetchView,isLiked,listenForComment} = React.useContext(SocketContext);
+  const {like,view,unlike,fetchLike,listenForLike,listenForView,fetchView,isLiked,listenForComment,fetchComment} = React.useContext(SocketContext);
   const {openLogin} = React.useContext(ModalContext)
   const user = useSelector(state=>state.auth.user) ?? null
   const [liked,setLiked] = useState(data.isLiked)
@@ -42,6 +42,9 @@ export default function Post({data}) {
   }
 
   useEffect(()=>{
+    fetchComment(data._id,(count)=>{
+      setComments(count)
+    })
     fetchView(data._id,(count)=>{
       setViews(count)
     })

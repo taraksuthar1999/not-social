@@ -9,8 +9,8 @@ import LoadingModal from "../utils/LoadingModal";
 
 function Home(props){
    useEffect(()=>{
-      props.getPosts({userId:props.auth.user?._id})
-   },[props.auth.user])
+      if(!props.post.posts.length)props.getPosts({userId:props.auth.user?._id})
+   },[])
     return (
       <Box>
         <Grid container sx={{borderLeft:"1px solid rgba(0, 0, 0, 0.12)",borderTop:"1px solid rgba(0, 0, 0, 0.12)"}}>

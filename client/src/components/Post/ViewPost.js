@@ -42,9 +42,9 @@ function ViewPost(props){
     const [likes,setLikes] = useState(0)
     const [liked,setLiked] = useState(false)
 
-    useEffect(()=>{
-        props.getPost({id})
-    },[])
+    // useEffect(()=>{
+    //     props.getPost({id})
+    // },[])
     
     const likeHandler = async(callback)=>{
         callback(id,user?._id,(state)=>{
