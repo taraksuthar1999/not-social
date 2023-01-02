@@ -42,6 +42,7 @@ app.use((err, _req, res, next) => {
     err.message ? res.reply({ code: 405, message: err.message }) :
         res.reply(ResponseMessage_1.customResponse['SERVER_ERROR']);
 });
-const PORT = process.env.PORT;
-server.listen(PORT, () => console.log(`Server up and running on ${PORT}`));
+const PORT = Number(process.env.PORT);
+const HOST = '0.0.0.0';
+server.listen(PORT, HOST, () => console.log(`Server up and running on ${HOST}:${PORT}`));
 //# sourceMappingURL=Server.js.map

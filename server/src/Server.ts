@@ -64,6 +64,7 @@ app.use((err:Error,_req:any,res:any,next:NextFunction)=>{
   res.reply(customResponse['SERVER_ERROR'])
 })
 
-const PORT = process.env.PORT;
+const PORT = Number(process.env.PORT);
+const HOST = '0.0.0.0'
 
-server.listen(PORT, () => console.log(`Server up and running on ${PORT}`));
+server.listen(PORT,HOST, () => console.log(`Server up and running on ${HOST}:${PORT}`));
