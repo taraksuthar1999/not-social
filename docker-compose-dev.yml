@@ -33,7 +33,7 @@ services:
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
-      - ORIGIN=http://35.75.20.53:3050
+      - ORIGIN=http://localhost:3050
       - PORT=3009
       - SECRET=secret
       - DB=userData
@@ -42,10 +42,10 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./client   
-    volumes:
+    volumes:  
       - /app/node_modules
       - ./client:/app
     environment:
       - WDS_SOCKET_PORT=0
-      - REACT_APP_BASE_URL=http://35.75.20.53:3050/api/v1
-      - REACT_APP_BACKEND_URL=http://35.75.20.53:3009
+      - REACT_APP_BASE_URL=http://localhost:3050/api/v1
+      - REACT_APP_BACKEND_URL=http://localhost:3009
