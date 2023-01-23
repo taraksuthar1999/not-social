@@ -41,7 +41,7 @@ services:
   client:
     build:
       dockerfile: Dockerfile
-      context: ./client   
+      context: ./client
     volumes:  
       - /app/node_modules
       - ./client:/app
