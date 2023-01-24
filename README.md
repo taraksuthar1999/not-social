@@ -23,7 +23,7 @@ Whether you use this project, have learned something from it, or just like it, p
 - views
 - Other awesome features yet to be implemented
 
-![Desktop view]()
+![login](https://github.com/taraksuthar1999/not-social/blob/main/client/public/login.png?raw=true)
 
 ![Mobile view]()
 
