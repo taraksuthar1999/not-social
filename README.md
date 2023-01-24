@@ -17,7 +17,7 @@ This is a Anonymous Social Media application powered by React and Express that p
 - Implemented ci-cd for seamless development and deployment.
 - Other awesome features yet to be implemented.
 
-![login](https://github.com/taraksuthar1999/not-social/blob/main/client/public/login.png?raw=true)
+![login](https://github.com/taraksuthar1999/not-social/blob/main/client/public/login.png?raw=true){:height="100px" width="100px"}
 
 ![register](https://github.com/taraksuthar1999/not-social/blob/main/client/public/register.png?raw=true)
 
