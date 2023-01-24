@@ -8,31 +8,29 @@ This is a Anonymous Social Media application powered by React and Express that p
 ![App Preview]()
 
 ---
-## Buy me a coffee
-
-Whether you use this project, have learned something from it, or just like it, please consider supporting it by buying me a coffee, so I can dedicate more time on open-source projects like this :)
-
-<a href="#" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-
----
 
 ## Features
-- Material Design
-- realtime likes
-- comments
-- views
-- Other awesome features yet to be implemented
+- Response Material Design.
+- Secure authorization & authentication.
+- Realtime likes, comments & views making it more engaging.
+- Implemented websockets with redis for fast realtime performance.
+- Implemented ci-cd for seamless development and deployment.
+- Other awesome features yet to be implemented.
 
 ![login](https://github.com/taraksuthar1999/not-social/blob/main/client/public/login.png?raw=true)
 
-![Mobile view]()
+![register](https://github.com/taraksuthar1999/not-social/blob/main/client/public/register.png?raw=true)
+
+![posts](https://github.com/taraksuthar1999/not-social/blob/main/client/public/posts.png?raw=true)
+
+![post](https://github.com/taraksuthar1999/not-social/blob/main/client/public/post.png?raw=true)
+
+![comments](https://github.com/taraksuthar1999/not-social/blob/main/client/public/comments.png?raw=true)
 
 ## Setup
 
-
----
-
-## Usage
-
+clone repo
+install docker
+docker-compose -f docker-compose-dev.yml up --build
 
 ---
