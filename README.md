@@ -18,14 +18,16 @@ This is a Anonymous Social Media application powered by React and Express that p
 - Other awesome features yet to be implemented.
 
 
-
+<h3>Mobile view</h3>
 <p float="left">
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-login.png?raw=true" width="300"/>
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-posts.png?raw=true" width="300" /> 
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/logout.png?raw=true" width="300" />
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-login.png?raw=true" width="300" style="margin:0px 10px"/>
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-posts.png?raw=true" width="300" style="margin:0px 10px"/> 
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/logout.png?raw=true" width="300" style="margin:0px 10px"/>
 </p>
+</br>
+</br>
 
-
+<h3>Desktop view</h3>
 ![login](https://github.com/taraksuthar1999/not-social/blob/main/client/public/login.png?raw=true)
 ![modile view](https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-login.png?raw=true)
 
