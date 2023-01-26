@@ -40,9 +40,10 @@ This is a Anonymous Social Media application powered by React and Express that p
 </p>
 
 ## Setup
-
-clone repo
-install docker
-docker-compose -f docker-compose-dev.yml up --build
+<ul>
+  <li>clone repo</li>
+  <li>install docker</li>
+  <li>docker-compose -f docker-compose-dev.yml up --build</li>
+</ul>
 
 ---
