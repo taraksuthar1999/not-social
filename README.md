@@ -29,14 +29,14 @@ This is a Anonymous Social Media application powered by React and Express that p
 
 <h3>Desktop view</h3>
 <p float="left">
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/login.png?raw=true" width="200" style="margin:0px 10px"/>
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/register.png?raw=true" width="200" style="margin:0px 10px"/> 
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/posts.png?raw=true" width="200" style="margin:0px 10px"/>
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/login.png?raw=true" width="300" style="margin:0px 10px"/>
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/register.png?raw=true" width="300" style="margin:0px 10px"/> 
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/posts.png?raw=true" width="300" style="margin:0px 10px"/>
 </p>
 
 <p float="left">
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/post.png?raw=true" width="200" style="margin:0px 10px"/>
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/comments.png?raw=true" width="200" style="margin:0px 10px"/> 
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/post.png?raw=true" width="300" style="margin:0px 10px"/>
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/comments.png?raw=true" width="300" style="margin:0px 10px"/> 
 </p>
 
 ## Setup
