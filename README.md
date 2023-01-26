@@ -20,26 +20,23 @@ This is a Anonymous Social Media application powered by React and Express that p
 
 <h3>Mobile view</h3>
 <p float="left">
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-login.png?raw=true" width="300" style="margin:0px 10px"/>
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-posts.png?raw=true" width="300" style="margin:0px 10px"/> 
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/logout.png?raw=true" width="300" style="margin:0px 10px"/>
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-login.png?raw=true" width="200" style="margin:0px 10px"/>
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-posts.png?raw=true" width="200" style="margin:0px 10px"/> 
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/logout.png?raw=true" width="200" style="margin:0px 10px"/>
 </p>
 </br>
 </br>
 
 <h3>Desktop view</h3>
-![login](https://github.com/taraksuthar1999/not-social/blob/main/client/public/login.png?raw=true)
-![modile view](https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-login.png?raw=true)
-
-![register](https://github.com/taraksuthar1999/not-social/blob/main/client/public/register.png?raw=true)
-
-![posts](https://github.com/taraksuthar1999/not-social/blob/main/client/public/posts.png?raw=true)
-![modile view](https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-posts.png?raw=true)
+<p float="left">
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/login.png?raw=true" width="100" style="margin:0px 10px"/>
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/register.png?raw=true" width="100" style="margin:0px 10px"/> 
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/posts.png?raw=true" width="100" style="margin:0px 10px"/>
+</p>
 
 ![post](https://github.com/taraksuthar1999/not-social/blob/main/client/public/post.png?raw=true)
 
 ![comments](https://github.com/taraksuthar1999/not-social/blob/main/client/public/comments.png?raw=true)
-![modile view](https://github.com/taraksuthar1999/not-social/blob/main/client/public/logout.png?raw=true)
 
 ## Setup
 
