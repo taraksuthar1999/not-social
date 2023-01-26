@@ -5,8 +5,6 @@ Social Media App
 
 This is a Anonymous Social Media application powered by React and Express that provides the main functions you'd expect from a social media, such as login,logout, like, comment, realtime distributed like, comment and view counts etc.
 
-![App Preview]()
-
 ---
 
 ## Features
