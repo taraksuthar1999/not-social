@@ -20,9 +20,9 @@ This is a Anonymous Social Media application powered by React and Express that p
 
 
 <p float="left">
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-login.png?raw=true"/>
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-posts.png?raw=true" width="100" /> 
-  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/logout.png?raw=true" width="100" />
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-login.png?raw=true" width="300"/>
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/m-posts.png?raw=true" width="300" /> 
+  <img src="https://github.com/taraksuthar1999/not-social/blob/main/client/public/logout.png?raw=true" width="300" />
 </p>
 
 
